@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: "Roboto-Black";
+    src: url("assets/Fonts/Roboto-Black.eot");
+    src: local("☺"), url("assets/Fonts/Roboto-Black.woff") format("woff"),
+        url("assets/Fonts/Roboto-Black.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("assets/Fonts/Roboto-Bold.eot");
+    src: local("☺"), url("assets/Fonts/Roboto-Bold.woff") format("woff"),
+        url("assets/Fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("assets/Fonts/Roboto-Light.eot");
+    src: local("☺"), url("assets/Fonts/Roboto-Light.woff") format("woff"),
+        url("assets/Fonts/Roboto-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url("assets/Fonts/Roboto-Medium.eot");
+    src: local("☺"), url("assets/Fonts/Roboto-Medium.woff") format("woff"),
+        url("assets/Fonts/Roboto-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("assets/Fonts/Roboto-Regular.eot");
+    src: local("☺"), url("assets/Fonts/Roboto-Regular.woff") format("woff"),
+        url("assets/Fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
+.transition {transition: all .5s ease !important }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {@apply lg:text-regular sm:text-small text-xSmall font-RobotoRegular}
+a {@apply font-RobotoMedium}
+p {@apply mb-3 text-grayLight}
+span {@apply text-grayLight}
+label {@apply text-grayLight }
+input , textarea , select , .input {@apply border border-borderColor w-full sm:p-[14px_18px] p-[12px_14px] rounded-md leading-none }
+input::placeholder {@apply text-grayLight font-RobotoRegular}
+.theme_btn {@apply block w-full bg-primary text-white md:p-4 p-3 rounded-8 font-RobotoMedium border-[1px] border-primary text-center leading-none}
+.theme_btn:hover {@apply bg-white text-primary border-[1px] border-primary}
+
+
+
+.dropdownlist {@apply absolute mt-2 transition top-[100%] z-[1] max-h-[200px] w-full overflow-auto border rounded-8 border-borderColor bg-white p-[14px_18px] leading-none}
+
+
+
+
